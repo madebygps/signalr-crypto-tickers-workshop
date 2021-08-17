@@ -1,0 +1,73 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+
+<h1>Crypto Prices</h1>
+
+
+@if (prices == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name. </th>
+                <th>Current Price. </th>
+                <th>Symbol</th>
+                <th>Market Cap</th>
+                <th>Total Volume. </th>
+                <th>Image. </th>
+                <th>Price chance 24h</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var coin in prices)
+            {
+                <tr>
+                    <td>@coin.id</td>
+                    <td>@coin.name</td>
+                    <td>@coin.current_price</td>
+                    <td>@coin.Symbol</td>
+                    <td>@coin.market_cap</td>
+                    <td>@coin.total_volume</td>
+                    <td>@coin.image</td>
+                    <td>@coin.price_change_percentage_24h</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+  
+    private Coin[] prices;
+
+    protected override async Task OnInitializedAsync()
+    {
+        
+        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7071/api/GetPricesJson");
+    }
+
+
+
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+   
+
+    public class Coin
+    {
+        public string id { get; set; }
+        public string Symbol { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
+        public double current_price { get; set; }
+        public object market_cap { get; set; }
+        public object total_volume { get; set; }
+        public double price_change_percentage_24h { get; set; }
+        public double market_cap_change_24h { get; set; }
+        public double market_cap_change_percentage_24h { get; set; }
+    }
+
+}
