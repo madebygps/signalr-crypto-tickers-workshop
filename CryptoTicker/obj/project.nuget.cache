@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q9nzkledJNciKntOeqr/lHZZmjj4GD3MOKsAxdj/OiYQ0uAYNe5oUgSTuM4g8nZbDHzDwdS41yjoNpOEuYYfRw==",
+  "dgSpecHash": "F5l3sO1OGe6Dnmu5oDQADSVWWSTrmUaS1CjXt2jZ8nzCyi+rGSFC/72G/zZ5ta20DSq+JCUe0njCsb7XcD0AeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\CryptoTicker\\CryptoTicker.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,15 @@
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.components.web\\5.0.9\\microsoft.aspnetcore.components.web.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.9\\microsoft.aspnetcore.components.webassembly.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\5.0.9\\microsoft.aspnetcore.components.webassembly.devserver.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\5.0.9\\microsoft.aspnetcore.connections.abstractions.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\5.0.9\\microsoft.aspnetcore.http.connections.client.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\5.0.9\\microsoft.aspnetcore.http.connections.common.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.9\\microsoft.aspnetcore.http.features.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.9\\microsoft.aspnetcore.metadata.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\5.0.9\\microsoft.aspnetcore.signalr.client.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\5.0.9\\microsoft.aspnetcore.signalr.client.core.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\5.0.9\\microsoft.aspnetcore.signalr.common.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\5.0.9\\microsoft.aspnetcore.signalr.protocols.json.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
@@ -25,11 +33,12 @@
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.jsinterop\\5.0.9\\microsoft.jsinterop.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.9\\microsoft.jsinterop.webassembly.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\system.threading.channels\\5.0.0\\system.threading.channels.5.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.9\\microsoft.netcore.app.runtime.browser-wasm.5.0.9.nupkg.sha512"
   ],
   "logs": []

@@ -82,6 +82,13 @@ using CryptoTicker.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
+using Microsoft.AspNetCore.SignalR.Client;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
     public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,16 +98,49 @@ using CryptoTicker.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
+#line 45 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
        
   
     private Coin[] prices;
+    private HubConnection hubConnection;
+    public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
     protected override async Task OnInitializedAsync()
     {
         
-        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7071/api/GetPricesJson");
+
+        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7071/api").Build();
+
+        
+
+        hubConnection.On<Coin[]>("updated", (coin) =>
+            {
+
+                prices = coin;
+            
+                StateHasChanged();
+
+
+            }
+                         
+            );
+   
+        await hubConnection.StartAsync();
+        
+        // 
+
+          
     }
+
+     public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+    
 
 
 
@@ -125,6 +165,7 @@ using CryptoTicker.Shared;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

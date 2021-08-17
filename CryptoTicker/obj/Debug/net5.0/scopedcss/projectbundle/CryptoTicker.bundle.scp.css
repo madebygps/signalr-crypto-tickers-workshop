@@ -1,5 +1,17 @@
 @import '';
 
+/* /Pages/FetchData.razor.rz.scp.css */
+.green[b-yhfvw8jw73]{
+    background-color:green;
+   }
+  
+.blue[b-yhfvw8jw73]{
+    background-color:blue;
+   }
+  
+.red[b-yhfvw8jw73]{
+    background-color:red;
+   }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-6h19j7qvcy] {
     position: relative;

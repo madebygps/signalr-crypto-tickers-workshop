@@ -1,8 +1,11 @@
 ﻿@page "/fetchdata"
 @inject HttpClient Http
+@using Microsoft.AspNetCore.SignalR.Client;
+@inject NavigationManager NavigationManager
+
 
 <h1>Crypto Prices</h1>
-
+<span> SignalR status: @hubConnection.State</span>
 
 @if (prices == null)
 {
@@ -13,13 +16,12 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+              
                 <th>Name. </th>
                 <th>Current Price. </th>
                 <th>Symbol</th>
                 <th>Market Cap</th>
                 <th>Total Volume. </th>
-                <th>Image. </th>
                 <th>Price chance 24h</th>
             </tr>
         </thead>
@@ -27,14 +29,13 @@ else
             @foreach (var coin in prices)
             {
                 <tr>
-                    <td>@coin.id</td>
+                    
                     <td>@coin.name</td>
                     <td>@coin.current_price</td>
                     <td>@coin.Symbol</td>
                     <td>@coin.market_cap</td>
                     <td>@coin.total_volume</td>
-                    <td>@coin.image</td>
-                    <td>@coin.price_change_percentage_24h</td>
+                    <td class="@( coin.price_change_percentage_24h > 0? "green" : "red")">@coin.price_change_percentage_24h%</td>
                 </tr>
             }
         </tbody>
@@ -44,12 +45,45 @@ else
 @code {
   
     private Coin[] prices;
+    private HubConnection hubConnection;
+    public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
     protected override async Task OnInitializedAsync()
     {
         
-        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7071/api/GetPricesJson");
+
+        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7071/api").Build();
+
+        
+
+        hubConnection.On<Coin[]>("updated", (coin) =>
+            {
+
+                prices = coin;
+            
+                StateHasChanged();
+
+
+            }
+                         
+            );
+   
+        await hubConnection.StartAsync();
+        
+        // 
+
+          
     }
+
+     public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+    
 
 
 

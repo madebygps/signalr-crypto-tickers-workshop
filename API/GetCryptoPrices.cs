@@ -12,9 +12,7 @@ namespace Company.Function
     
          
         [Function("GetCryptoPrices")]
-        [CosmosDBOutput("%DatabaseName%", "%CollectionName%", ConnectionStringSetting = "CosmosDBConnectionString")]
-        
-        public async static Task<object> Run([TimerTrigger("0 */1 * * * *", RunOnStartup = true)] MyInfo myTimer, FunctionContext context)
+        public async static Task<MyOutputType> Run([TimerTrigger("0 */1 * * * *", RunOnStartup = true)] MyInfo myTimer, FunctionContext context)
         {
      
             Coin[] prices;
@@ -35,8 +33,19 @@ namespace Company.Function
 
                 }
             }
+
+            MySignalRMessage mySignalRMessage = new MySignalRMessage()
+            {
+                Target = "updated",
+                Arguments =  new object[]{prices} 
+            };
+            //logger.LogInformation(mySignalRMessage.Arguments.Length.ToString());
             
-            return prices;
+            return new MyOutputType()
+        {
+            mySignalRMessage = mySignalRMessage,
+            CosmosCoins = prices
+        };
         
         }
     }
@@ -54,5 +63,20 @@ namespace Company.Function
         public DateTime Next { get; set; }
 
         public DateTime LastUpdated { get; set; }
+    }
+    public class MyOutputType
+    {
+        [SignalROutput(HubName = "stocks", ConnectionStringSetting = "AzureSignalRConnectionString")]
+        public MySignalRMessage mySignalRMessage {get;set;}
+
+        [CosmosDBOutput("%DatabaseName%", "%CollectionName%", ConnectionStringSetting = "CosmosDBConnectionString")]
+        public Coin[] CosmosCoins {get;set;}
+       
+    }
+    public class MySignalRMessage
+    {
+        public string Target { get; set; }
+
+        public object Arguments { get; set; }
     }
 }
