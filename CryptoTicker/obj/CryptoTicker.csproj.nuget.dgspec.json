@@ -40,6 +40,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "BlazorAnimate": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[0.9.4.3, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[0.9.4.3, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[5.0.9, )"

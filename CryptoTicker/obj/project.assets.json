@@ -2,6 +2,79 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "BlazorAnimate/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0",
+          "MinVer": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorAnimate.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorAnimate.props": {}
+        }
+      },
+      "Blazorise/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Bootstrap/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.4.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Bootstrap.props": {}
+        }
+      },
+      "Blazorise.Icons.FontAwesome/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.4.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -391,6 +464,15 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "MinVer/2.0.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
         }
       },
       "MudBlazor/5.1.0": {
@@ -441,6 +523,79 @@
       }
     },
     "net5.0/browser-wasm": {
+      "BlazorAnimate/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0",
+          "MinVer": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorAnimate.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorAnimate.props": {}
+        }
+      },
+      "Blazorise/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Bootstrap/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.4.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Bootstrap.props": {}
+        }
+      },
+      "Blazorise.Icons.FontAwesome/0.9.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.4.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -830,6 +985,15 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "MinVer/2.0.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
         }
       },
       "MudBlazor/5.1.0": {
@@ -881,6 +1045,83 @@
     }
   },
   "libraries": {
+    "BlazorAnimate/3.0.0": {
+      "sha512": "IUX/IFdEKiQ5ncZ5/iVhaZynWL2dA04lH9ieza9JhBj/jJH8f2NwM6OqdJFm7RfkFdbkIH8t2Bxd/laZS2EXWQ==",
+      "type": "package",
+      "path": "blazoranimate/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazoranimate.3.0.0.nupkg.sha512",
+        "blazoranimate.nuspec",
+        "build/BlazorAnimate.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorAnimate.props",
+        "buildTransitive/BlazorAnimate.props",
+        "lib/netstandard2.0/BlazorAnimate.dll",
+        "staticwebassets/aos.css",
+        "staticwebassets/blazorAnimateInterop.js"
+      ]
+    },
+    "Blazorise/0.9.4.3": {
+      "sha512": "h6y9Vu6II1PB7/Y/4VplB+Tsv2JGUZHiPVFNfMEhNE/IfCndrFQlAvsTiIa3gxCcAxb9vSyHz5gNl6CpHwKRvg==",
+      "type": "package",
+      "path": "blazorise/0.9.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.0.9.4.3.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "lib/net5.0/Blazorise.dll",
+        "lib/net5.0/Blazorise.xml",
+        "lib/net6.0/Blazorise.dll",
+        "lib/net6.0/Blazorise.xml",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.js"
+      ]
+    },
+    "Blazorise.Bootstrap/0.9.4.3": {
+      "sha512": "tI54TW5fbyOY4ix6Ij1nn+TrCwmONzkbClfIvriZ/OzdyttOGhJ7p3f/a0jPkuF4XZGHi3UldWsfKwRhTwWalQ==",
+      "type": "package",
+      "path": "blazorise.bootstrap/0.9.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.bootstrap.0.9.4.3.nupkg.sha512",
+        "blazorise.bootstrap.nuspec",
+        "build/Blazorise.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.Bootstrap.props",
+        "buildTransitive/Blazorise.Bootstrap.props",
+        "lib/net5.0/Blazorise.Bootstrap.dll",
+        "lib/net6.0/Blazorise.Bootstrap.dll",
+        "staticwebassets/blazorise.bootstrap.css",
+        "staticwebassets/blazorise.bootstrap.js"
+      ]
+    },
+    "Blazorise.Icons.FontAwesome/0.9.4.3": {
+      "sha512": "S2irD7ZE3vFQVNJ47ZFlvzJ0MEHCfPYGpJVs+0rktO4DPOpCHE39uEAfGzmZFMUkEoUsuIjdUcCEERkaZJI/CQ==",
+      "type": "package",
+      "path": "blazorise.icons.fontawesome/0.9.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.icons.fontawesome.0.9.4.3.nupkg.sha512",
+        "blazorise.icons.fontawesome.nuspec",
+        "lib/net5.0/Blazorise.Icons.FontAwesome.dll",
+        "lib/net6.0/Blazorise.Icons.FontAwesome.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.9": {
       "sha512": "fS4eD0OPTj29/8xnGybpbsre6OUFoeHX5J1HTSS6o/jmOYOaSyW+C0m/cmJSoVdl2VFaF0ZPggi2ATzYBYzq6w==",
       "type": "package",
@@ -1506,6 +1747,27 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "MinVer/2.0.0": {
+      "sha512": "1U1JIwD47a/m9S1LXdDm+fByP3LYR9hTeFfi1MlizScXF4e4yUpZvunEyQAovVfi4qYaUlVzIbk08OXFfz3FfQ==",
+      "type": "package",
+      "path": "minver/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MinVer.targets",
+        "buildMultiTargeting/MinVer.targets",
+        "minver.2.0.0.nupkg.sha512",
+        "minver.nuspec",
+        "minver.png",
+        "minver/McMaster.Extensions.CommandLineUtils.dll",
+        "minver/MinVer.Lib.dll",
+        "minver/MinVer.Lib.pdb",
+        "minver/MinVer.deps.json",
+        "minver/MinVer.dll",
+        "minver/MinVer.pdb",
+        "minver/MinVer.runtimeconfig.json"
+      ]
+    },
     "MudBlazor/5.1.0": {
       "sha512": "1+S6iKhtLK8+slvfi15qZiyP2IC4eZsj9lyHQD4WMV8C+LNvgsi19awPdOKfoHJxrdLOFqLpPN4vGUFRoYLsmA==",
       "type": "package",
@@ -1604,6 +1866,9 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BlazorAnimate >= 3.0.0",
+      "Blazorise.Bootstrap >= 0.9.4.3",
+      "Blazorise.Icons.FontAwesome >= 0.9.4.3",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.9",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.9",
       "Microsoft.AspNetCore.SignalR.Client >= 5.0.9",
@@ -1650,6 +1915,18 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "BlazorAnimate": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "Blazorise.Bootstrap": {
+            "target": "Package",
+            "version": "[0.9.4.3, )"
+          },
+          "Blazorise.Icons.FontAwesome": {
+            "target": "Package",
+            "version": "[0.9.4.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.9, )"

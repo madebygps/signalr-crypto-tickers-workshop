@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FcTQ4tBca4Cp63Hdl50M+G3Xkb7d7GDYchkMuVDmGG/egDATf2F4pnmyQsmLvmuoPMg7ESJd+znw31bE4Aty0g==",
+  "dgSpecHash": "eNVESyfWAYW6wM1Isv5+1MLVRkslSeT8uT3ZwgU+8b/wctHAfKpRdYKw2IsXEmKkQgAHOuzslYqIT3LXLy3c0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\CryptoTicker\\CryptoTicker.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gwyne\\.nuget\\packages\\blazoranimate\\3.0.0\\blazoranimate.3.0.0.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\blazorise\\0.9.4.3\\blazorise.0.9.4.3.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\blazorise.bootstrap\\0.9.4.3\\blazorise.bootstrap.0.9.4.3.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\blazorise.icons.fontawesome\\0.9.4.3\\blazorise.icons.fontawesome.0.9.4.3.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.9\\microsoft.aspnetcore.authorization.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.9\\microsoft.aspnetcore.components.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.9\\microsoft.aspnetcore.components.analyzers.5.0.9.nupkg.sha512",
@@ -36,6 +40,7 @@
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.jsinterop\\5.0.9\\microsoft.jsinterop.5.0.9.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.9\\microsoft.jsinterop.webassembly.5.0.9.nupkg.sha512",
+    "C:\\Users\\gwyne\\.nuget\\packages\\minver\\2.0.0\\minver.2.0.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\mudblazor\\5.1.0\\mudblazor.5.1.0.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\gwyne\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
