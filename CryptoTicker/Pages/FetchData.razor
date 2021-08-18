@@ -4,47 +4,84 @@
 @inject NavigationManager NavigationManager
 
 
-<h1>Crypto Prices</h1>
-<span> SignalR status: @hubConnection.State</span>
 
 @if (prices == null)
 {
-    <p><em>Loading...</em></p>
+    
+    
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-              
-                <th>Name. </th>
-                <th>Current Price. </th>
-                <th>Symbol</th>
-                <th>Market Cap</th>
-                <th>Total Volume. </th>
-                <th>Price chance 24h</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var coin in prices)
-            {
-                <tr>
+    
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">$PRICES</MudText>
+    <MudText Align="Align.Center">SignalR status: <MudText Align="Align.Center" Color="@(hubConnection.State.ToString() is "Connected" ? Color.Success : Color.Error)">@hubConnection.State</MudText></MudText> 
+
+   
+    
+    
+    
+    <MudGrid Class="mt-8">
+        @foreach(var coin in prices)
+        {
+             <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                
+                
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">@coin.name</MudText>
+                        <MudText Typo="Typo.body1" Align="Align.Center">
+                            @coin.Symbol
+                        </MudText>
+                        
+                    </CardHeaderContent>
                     
-                    <td>@coin.name</td>
-                    <td>@coin.current_price</td>
-                    <td>@coin.Symbol</td>
-                    <td>@coin.market_cap</td>
-                    <td>@coin.total_volume</td>
-                    <td class="@( coin.price_change_percentage_24h > 0? "green" : "red")">@coin.price_change_percentage_24h%</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                </MudCardHeader>
+                
+  <MudAvatar Image="@coin.image" Style="display: block; margin-left: auto;
+  margin-right: auto;" />
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h5">$@coin.current_price</MudText>
+                        <MudText Typo="Typo.subtitle1" Class="ml-1 mt-5" Color="Color.Secondary">/Current Price</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                        <MudListItem Icon="@Icons.Material.Filled.Analytics">
+                            @coin.market_cap.ToString("C") USD
+                        </MudListItem>
+                        <MudListItem Icon="@(coin.price_change_percentage_24h > 0? @Icons.Material.Filled.ArrowUpward: @Icons.Material.Filled.ArrowDownward)" IconColor="@(coin.price_change_percentage_24h > 0? Color.Success: Color.Error)">
+                            @coin.price_change_percentage_24h%
+                        </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                
+            </MudCard>
+        </MudItem>
+        }
+       
+    </MudGrid>
+    
+</MudContainer>
+
+<MudContainer Class="mt-10">
+ 
+   
+</MudContainer>
+
+
+
+
+
+     
+    
 }
 
 @code {
   
     private Coin[] prices;
+    bool disabled = false;
     private HubConnection hubConnection;
     public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
@@ -52,6 +89,7 @@ else
     {
         
 
+        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7071/api/GetPricesJson");
         hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7071/api").Build();
 
         
@@ -97,7 +135,7 @@ else
         public string name { get; set; }
         public string image { get; set; }
         public double current_price { get; set; }
-        public object market_cap { get; set; }
+        public double market_cap { get; set; }
         public object total_volume { get; set; }
         public double price_change_percentage_24h { get; set; }
         public double market_cap_change_24h { get; set; }

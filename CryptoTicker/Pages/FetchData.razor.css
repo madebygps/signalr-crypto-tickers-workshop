@@ -9,3 +9,9 @@
 .red{
     background-color:red;
    }
+
+.card-layout
+{
+    width: 50;
+    height: 50;
+}

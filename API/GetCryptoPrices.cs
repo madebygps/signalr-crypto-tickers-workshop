@@ -23,7 +23,7 @@ namespace Company.Function
             using (var httpClient = new HttpClient())
             {
             
-                var coinData = await httpClient.GetAsync("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2C%20ethereum%2C%20cardano%2C%20dogecoin%2C%20usd-coin&order=market_cap_desc&per_page=100&page=1&sparkline=false");                
+                var coinData = await httpClient.GetAsync("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");                
                 var body = await coinData.Content.ReadAsStringAsync();
                 prices = JsonSerializer.Deserialize<Coin[]>(body);              
                  

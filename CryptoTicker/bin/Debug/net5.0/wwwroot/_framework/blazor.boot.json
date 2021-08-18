@@ -39,6 +39,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-XNHVw5siarTMMQ009PdQgD7MrQ0iqnJ92cJOWSSE1vs=",
       "Microsoft.JSInterop.dll": "sha256-E3wWpdYhb0k2rxsSxtLYNRv652Vqa4jD10tJ7YcHMfU=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-qCntZAfBCtfByp1bUyV5HBcJpgteCGZZ1pMzH5kVDnE=",
+      "MudBlazor.dll": "sha256-avaFGVc80UDXVHjPFox+HOxEP8DePyrY6MetLQEjgCg=",
       "System.IO.Pipelines.dll": "sha256-3ET+mpR7F058YRj9YaLHOVXBqOW6iUxtIpeiKPYw4PA=",
       "Microsoft.CSharp.dll": "sha256-twUgoMqRCjMxtXUIYt\/QO2nXdwn36f5Nz240MccEpOQ=",
       "Microsoft.VisualBasic.Core.dll": "sha256-RUn00o3YkpuvHph4uivfeOWDNhB7YxKW6e9szvw225k=",
@@ -205,11 +206,11 @@
       "mscorlib.dll": "sha256-9AZ7YsJz\/p2gr4E0EQXdHBqwDxoXqtzxhqC6aRsa2K8=",
       "netstandard.dll": "sha256-yOOty6BTX3e57YAEHK5a4nku\/lj0vi7jg\/eQZAjbDQk=",
       "System.Private.CoreLib.dll": "sha256-rraBQp6NevIQiELPVfDFDl5pv9QVJqCiZhB5bkpiZ88=",
-      "CryptoTicker.dll": "sha256-qZou51MqwDtEESy1RdLF\/mm\/TVDC16tm3MJ29JCkDSs="
+      "CryptoTicker.dll": "sha256-zk1o3C6\/1QharAb4qfxQBGNFwdWCFJQYQV7Itj7A+lg="
     },
     "lazyAssembly": null,
     "pdb": {
-      "CryptoTicker.pdb": "sha256-Mn\/ffkBCSffuyhkW2vMZid7tH7STqr4t47oCrm3\/ti4="
+      "CryptoTicker.pdb": "sha256-6shDyuAOIWNwi8L5N2FdCggJTXHAfQ+ZOlv5o+\/\/1D0="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-L2vkcKzmXJtf+J7db5TbDMBckrgqJ5qc0ZzVIdRlm0I=",

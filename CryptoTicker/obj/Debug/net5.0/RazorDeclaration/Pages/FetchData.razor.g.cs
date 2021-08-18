@@ -83,6 +83,13 @@ using CryptoTicker.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\_Imports.razor"
+using MudBlazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
 using Microsoft.AspNetCore.SignalR.Client;
 
@@ -98,10 +105,11 @@ using Microsoft.AspNetCore.SignalR.Client;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
+#line 81 "C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\Pages\FetchData.razor"
        
   
     private Coin[] prices;
+    bool disabled = false;
     private HubConnection hubConnection;
     public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
@@ -109,6 +117,7 @@ using Microsoft.AspNetCore.SignalR.Client;
     {
         
 
+        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7071/api/GetPricesJson");
         hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7071/api").Build();
 
         
@@ -154,7 +163,7 @@ using Microsoft.AspNetCore.SignalR.Client;
         public string name { get; set; }
         public string image { get; set; }
         public double current_price { get; set; }
-        public object market_cap { get; set; }
+        public double market_cap { get; set; }
         public object total_volume { get; set; }
         public double price_change_percentage_24h { get; set; }
         public double market_cap_change_24h { get; set; }
