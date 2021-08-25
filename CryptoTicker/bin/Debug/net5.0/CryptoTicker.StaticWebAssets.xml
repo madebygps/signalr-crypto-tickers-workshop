@@ -1,8 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/BlazorAnimate" Path="C:\Users\gwyne\.nuget\packages\blazoranimate\3.0.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\gwyne\.nuget\packages\blazorise\0.9.4.3\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Blazorise.Bootstrap" Path="C:\Users\gwyne\.nuget\packages\blazorise.bootstrap\0.9.4.3\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\gwyne\.nuget\packages\mudblazor\5.1.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="/" Path="C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\gwyne\Developer\crypto-ticker-dotnet\CryptoTicker\obj\Debug\net5.0\scopedcss\bundle\" />
-</StaticWebAssets>
