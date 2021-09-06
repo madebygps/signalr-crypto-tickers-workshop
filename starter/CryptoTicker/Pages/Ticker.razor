@@ -1,0 +1,42 @@
+<MudItem xs="12" sm="6" md="4">
+    <Animate Animation="Animations.FlipUp" Duration="TimeSpan.FromSeconds(1)" Once="false">
+        <MudCard Elevation="25" Class="rounded-lg pb-4">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5" Align="Align.Center">@coin.name</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center">
+                        @coin.Symbol
+                    </MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+
+            <MudAvatar Image="@coin.image" Style="display: block; margin-left: auto; margin-right: auto;" />
+
+            <MudCardContent>
+                <div class="d-flex justify-center">
+                    <Animate Animation="Animations.ZoomIn" Duration="TimeSpan.FromSeconds(0.5)" Once="false">
+                        <MudText Typo="Typo.h5">$@coin.current_price</MudText>
+                    </Animate>
+                    <MudText Typo="Typo.subtitle1" Class="ml-1 mt-5" Color="MudBlazor.Color.Secondary">/Current Price
+                    </MudText>
+                </div>
+                <MudList Class="mx-auto mt-4" Style="width:300px;">
+                    <MudListItem Icon="@Icons.Material.Filled.Analytics">
+                        @coin.market_cap.ToString("C") USD
+                    </MudListItem>
+                    <MudListItem
+                        Icon="@(coin.price_change_percentage_24h > 0? @Icons.Material.Filled.ArrowUpward: @Icons.Material.Filled.ArrowDownward)"
+                        IconColor="@(coin.price_change_percentage_24h > 0? MudBlazor.Color.Success: MudBlazor.Color.Error)">
+                        @coin.price_change_percentage_24h%
+                    </MudListItem>
+                </MudList>
+            </MudCardContent>
+        </MudCard>
+    </Animate>
+</MudItem>
+
+@code {
+
+    [Parameter]
+    public Coin coin { get; set; }
+}

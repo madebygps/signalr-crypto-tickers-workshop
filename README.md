@@ -1,7 +1,8 @@
 # Crypto Dotnet Ticker
 
-A website that provides crypto price information. In this project we will:
-- Implement a function in Azure Functions that runs only when data changes in an Azure Cosmos DB.
+A website that provides crypto price information. In this workshop we will:
+
+- Implement a function in Azure Functions that runs only when data changes in an Azure Cosmos DB collection.
 - Implement a function in Azure Functions to broadcast changes to connected clients using SignalR Service.
 - Update the client web application to respond to SignalR messages.
 - Use Azure Storage to host our Blazor site.
@@ -10,7 +11,17 @@ A website that provides crypto price information. In this project we will:
 ![Infrastructure](./assets/polling-to-signalr.png)
 ## Architecture
 
-Some info about architecture goes here
+### Starter
+
+The starter project consists of a Blazor WASM project that when loaded pulls data from an API. The data will only update when the website is reloaded.
+
+### Completed 
+
+The completed project consists of a Blazor WASM project that loads data from an API and this data is then reloaded in realtime whenever new data is available in the Cosmos DB collection. 
+
+## How to run locally
+We will be developing with .NET 5. Please make sure you have [SDK installed](https://dotnet.microsoft.com/download)
+Follow the instructions from [this documentation](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp) to setup your local environnement
 
 ## SignalR and persistent connections
 

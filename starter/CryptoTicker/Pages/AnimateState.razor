@@ -1,0 +1,43 @@
+
+<div class="container @(IsShown?"spin-in":"fade-out")">
+    <span>@(Name??"")</span>
+</div>
+
+<style>
+    .container{
+        display:inline-block;
+        width:@width;
+        height:@height;
+        color:white;
+        background-color:blue;
+    }
+
+    .fade-out{
+       animation: fade @AnimationTime linear forwards;
+    }
+
+    .spin-in{
+       animation: spin @AnimationTime linear forwards;
+    }
+
+    @@keyframes fade {
+      0%   {opacity:1;}
+      99%  {width:@width; height:@height;}
+      100% {width:0px;height:0px; opacity:0;}
+    }
+
+    @@keyframes spin {
+      0%   {width:0px;height:0px; transform: rotate(0deg);}
+      99%  {width:@width; height:@height;}
+      100% {width:@width;height:@height;transform: rotate(1440deg);}
+    }
+</style>
+
+@code {
+    string width = "100px";
+    string height = "20px";
+
+    [Parameter] public string Name { get; set; }
+    [Parameter] public string AnimationTime { get; set; }
+    [Parameter] public bool IsShown { get; set; }
+}
