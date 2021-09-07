@@ -19,6 +19,16 @@ The starter project consists of a Blazor WASM project that when loaded pulls dat
 
 The completed project consists of a Blazor WASM project that loads data from an API and this data is then reloaded in realtime whenever new data is available in the Cosmos DB collection. 
 
+## Steps
+
+1. Create a SignalR service account.
+2. Create a Cosmos db account, database, and collection.
+3. Create a Timer function that runs every 60 seconds, grabs data from API and sends to the Cosmos DB collection and to the SignalR Service hub. 
+4. Create a HTTP function that will negotiate all connection to the SignalR hub. 
+5. In the Blazor WASM app, add code that will connect to the SignalR service.
+6. In the Blazor WASM app, add code that loads new data from SignalR service message.
+7. In Blazor WASM app, add code that initial loads from HTTP function, subsequent loads should be real time.
+
 ## How to run locally
 We will be developing with .NET 5. Please make sure you have [SDK installed](https://dotnet.microsoft.com/download)
 Follow the instructions from [this documentation](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp) to setup your local environnement
