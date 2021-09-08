@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 
 namespace CryptoTicker.Pages
 {
-    public class FetechDataBase : ComponentBase
+    public class FetchDataBase : ComponentBase
     {
         protected Coin[] prices;
 

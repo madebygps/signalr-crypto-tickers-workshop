@@ -23,13 +23,5 @@ namespace Company.Function
             return response;
         }
     }
-    public class MyConnectionInfo
-    {
-        public string Url { get; set; }
-
-        public string ConnectionId {get;set;}
-
-        public string AccessToken { get; set; }
-    }
 
 }

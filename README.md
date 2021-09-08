@@ -23,7 +23,7 @@ The completed project consists of a Blazor WASM project that loads data from an 
 
 1. Create a SignalR service account.
 2. Create a Cosmos db account, database, and collection.
-3. Create a Timer function that runs every 60 seconds, grabs data from API and sends to the Cosmos DB collection and to the SignalR Service hub. 
+3. Create a Timer function that runs every 60 seconds, grabs data from API and sends to the Cosmos DB collection and to the SignalR Service hub. Don't forget to add SignalR service and Cosmos DB values to `local.settings.json`
 4. Create a HTTP function that will negotiate all connection to the SignalR hub. 
 5. In the Blazor WASM app, add code that will connect to the SignalR service.
 6. In the Blazor WASM app, add code that loads new data from SignalR service message.
