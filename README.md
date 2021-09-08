@@ -52,3 +52,7 @@ Let's look at how to use SignalR to broadcast information from function that rea
 ## Host the website
 
 We use Azure storage to host our blazor website. Azure Storage includes a feature where you can place files in a specific storage container, which makes them available for HTTP requests. This feature, known as static website support makes hosting publicly available web pages a simple process.
+
+## Additional resources
+
+This demo is a spin on this learning module, check it out for more hands-on fun! https://aka.ms/UpdateWebApp6
