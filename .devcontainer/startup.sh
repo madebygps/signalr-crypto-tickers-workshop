@@ -1,6 +1,6 @@
 #! /bin/bash
 
-dotnet restore starter/api
-dotnet restore starter/CryptoTicker
-dotnet restore completed/API
-dotnet restore completed/CryptoTicker
+
+dotnet restore starter/Client
+dotnet restore completed/Api
+dotnet restore completed/Client
