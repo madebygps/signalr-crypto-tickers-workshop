@@ -23,9 +23,15 @@ Subsequent new data is pushed in realtime to the static website without reloadin
 
 ## Steps to go from starter to completed.
 
-You can clone the code and the completed project will work once you populate the API's `local.settings.json` with you resources. However if you want to take the starter project and implement real-time functionality on your own to learn and get hands-on, here are some guidelines:
+You can clone the code and the completed project will work once you populate the API's [`local.settings.json`](https://azure.microsoft.com/en-us/products/cosmos-db/) with your resources. However if you want to take the starter project and implement real-time functionality on your own to learn and get hands-on, here are some guidelines:
 
 ### API
+
+Some docs I found helpful:
+
+- [Build real-time Apps with Azure Functions and Azure SignalR Service](https://learn.microsoft.com/azure/azure-signalr/signalr-concept-azure-functions)
+- [Connect Azure Functions to Azure Cosmos DB using Visual Studio Code](https://learn.microsoft.com/azure/azure-functions/functions-add-output-binding-cosmos-db-vs-code?tabs=in-process&pivots=programming-language-csharp)
+- [How to deploy a Blazor WASM app to Azure Storage](https://microsoft.github.io/AzureTipsAndTricks/blog/tip221.html)
 
 0. Get a [Coin Gecko API key](https://www.coingecko.com/en/api)
 1. Create necessary Azure Resources:
