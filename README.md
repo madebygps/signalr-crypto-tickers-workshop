@@ -1,6 +1,8 @@
 # Serverless Crypto Tickers
 
-A static website with a serverless backend that provides crypto price information with 60 second updates in push and not polled. This project contains two different architectures and was made to demo how to implement real-time functionality to a static site.
+A static website with a serverless backend that provides crypto price information. The tickers update every in realtime whenever new data is made available to the database.
+
+This project contains two different architectures and was made to demo how to implement real-time functionality to a static site.
 
 View it live [here](https://cryptotickerstaticsite.z20.web.core.windows.net/)
 
@@ -9,11 +11,15 @@ View it live [here](https://cryptotickerstaticsite.z20.web.core.windows.net/)
 
 ### Starter
 
-The starter project consists of a Blazor WASM static website that when loaded polls data from an API. The data will only update when the website is reloaded/refreshed.
+The starter project consists of a [Blazor WASM](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) static website [deployed on Azure Storage](https://microsoft.github.io/AzureTipsAndTricks/blog/tip221.html). The website will make a GET call to [Coin Gecko API](https://www.coingecko.com/en/api) and display its information. 
+
+The data will only update when the website is reloaded/refreshed.
 
 ### Completed 
 
-The completed project consists of a Blazor WASM static website that first polls data from an API. Subsequent new data is pushed in realtime whenever new data is available in the Cosmos DB collection via Azure Functions and SignalR Service.
+The starter project consists of a [Blazor WASM](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) static website [deployed on Azure Storage](https://microsoft.github.io/AzureTipsAndTricks/blog/tip221.html). The website will make a GET call to  an API deployed on [Azure Functions](https://learn.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=in-process%2Cfunctionsv2&pivots=programming-language-csharp) and display its information. 
+
+Subsequent new data is pushed in realtime to the static website without reloading, whenever new data is available in the [Cosmos DB](https://azure.microsoft.com/products/cosmos-db/) collection via Azure Functions and [SignalR Service](https://learn.microsoft.com/azure/azure-signalr/signalr-overview).
 
 ## Steps to go from starter to completed.
 
@@ -21,6 +27,7 @@ You can clone the code and the completed project will work once you populate the
 
 ### API
 
+0. Get a [Coin Gecko API key](https://www.coingecko.com/en/api)
 1. Create necessary Azure Resources:
     - Resource Group
     - Cosmos DB account (my project uses NoSQL API but you can adapt to any)
