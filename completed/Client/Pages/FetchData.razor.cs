@@ -1,10 +1,11 @@
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using Completed.Shared;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace CryptoTicker.Pages
+namespace Completed.Client.Pages
 {
     public class FetechDataBase : ComponentBase
     {

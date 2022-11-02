@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Azure.Functions.Worker.Configuration;
 
-namespace API
+namespace Completed.Api
 {
     public class Program
     {

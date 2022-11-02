@@ -1,11 +1,9 @@
-using System;
-using System.Net.Http;
 using System.Text.Json;
-using System.Threading.Tasks;
+using Completed.Shared;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 
-namespace Company.Function
+namespace Completed.Api
 {
     public static class GetCryptoPrices
     {

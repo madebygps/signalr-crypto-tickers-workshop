@@ -1,11 +1,12 @@
+@using Completed.Shared
 <MudItem xs="12" sm="6" md="4">
-    <Animate Animation="Animations.FlipUp" Duration="TimeSpan.FromSeconds(1)" Once="false">
+
         <MudCard Elevation="25" Class="rounded-lg pb-4">
             <MudCardHeader>
                 <CardHeaderContent>
                     <MudText Typo="Typo.h5" Align="Align.Center">@coin.name</MudText>
                     <MudText Typo="Typo.body1" Align="Align.Center">
-                        @coin.Symbol
+                        @coin.symbol
                     </MudText>
                 </CardHeaderContent>
             </MudCardHeader>
@@ -14,9 +15,9 @@
 
             <MudCardContent>
                 <div class="d-flex justify-center">
-                    <Animate Animation="Animations.ZoomIn" Duration="TimeSpan.FromSeconds(0.5)" Once="false">
+            
                         <MudText Typo="Typo.h5">$@coin.current_price</MudText>
-                    </Animate>
+                   
                     <MudText Typo="Typo.subtitle1" Class="ml-1 mt-5" Color="MudBlazor.Color.Secondary">/Current Price
                     </MudText>
                 </div>
@@ -32,7 +33,7 @@
                 </MudList>
             </MudCardContent>
         </MudCard>
-    </Animate>
+
 </MudItem>
 
 @code {

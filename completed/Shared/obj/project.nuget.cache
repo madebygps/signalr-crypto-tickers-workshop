@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ASPjZycf95nJaG7Wev17+QswkBiYhKPFKyaayH8Kcg7445wtBxCFsgzTbYILQ8w0BX9JgaCqet8Sj8ESo+74wQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gwynethp\\Developer\\crypto-ticker-dotnet\\completed\\Shared\\Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gwynethp\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gwynethp\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

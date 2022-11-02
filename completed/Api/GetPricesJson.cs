@@ -3,8 +3,9 @@ using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using Completed.Shared;
 
-namespace Company.Function
+namespace Completed.Api
 {
     public static class GetPricesJson
     {
