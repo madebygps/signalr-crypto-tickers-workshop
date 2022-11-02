@@ -1,6 +1,8 @@
-# Crypto Dotnet Ticker
+# Serverless Crypto Tickers
 
-A website that provides crypto price information. This project contains two different architectures and was made to demo how to implement real-time functionality to a static site.
+A static website with a serverless backend that provides crypto price information with 60 second updates in push and not polled. This project contains two different architectures and was made to demo how to implement real-time functionality to a static site.
+
+View it live [here](https://cryptotickerstaticsite.z20.web.core.windows.net/)
 
 ![Infrastructure](./assets/polling-to-signalr.png)
 ## Architecture
@@ -51,7 +53,7 @@ I'm using [MudBlazor](https://mudblazor.com/) for Client UI components, it's awe
 - [.NET 6](https://dotnet.microsoft.com/download)
 - All the pre requisites from [this documentation](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp)
 
-### Debugging
+### Debug
 
 I've created custom [VSCode Launch.json](https://code.visualstudio.com/docs/editor/debugging) tasks. Make sure the API is running before you run the Client.
 
@@ -61,8 +63,8 @@ I've created custom [VSCode Launch.json](https://code.visualstudio.com/docs/edit
 
 ## Known issues
 
-- I've included a `devcontainer.json` for codespaces and devcontainer, however it's not fully working quite yet. WIP.
-- CI/CD is coming.
+- I've included a `devcontainer.json` for codespaces and devcontainer support, however it's not fully working quite yet. WIP.
+- CI/CD is coming. At the moment the client is deployed on Azure Storage Account. 
 
 ## Additional resources
 

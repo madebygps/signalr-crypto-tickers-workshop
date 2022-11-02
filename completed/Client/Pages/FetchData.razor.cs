@@ -1,6 +1,4 @@
-using System.Net.Http;
 using System.Net.Http.Json;
-using System.Threading.Tasks;
 using Completed.Shared;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -18,11 +16,15 @@ namespace Completed.Client.Pages
     protected override async Task OnInitializedAsync()
     {
         
+        // Prod
+        prices = await Http.GetFromJsonAsync<Coin[]>("https://cryptotickersnetgps.azurewebsites.net/api/GetPricesJson");
+        // Local
+        // prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7170/api/GetPricesJson");
 
-        // prices = await Http.GetFromJsonAsync<Coin[]>("https://cryptodatadotnet.azurewebsites.net/api/GetPricesJson");
-        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7170/api/GetPricesJson");
-            
-        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7170/api").Build();
+       // Prod    
+        hubConnection = new HubConnectionBuilder().WithUrl("https://cryptotickersnetgps.azurewebsites.net/api/").Build();
+        // Local
+        // hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7170/api").Build();
 
         hubConnection.On<Coin[]>("updated", (coin) =>
             {
