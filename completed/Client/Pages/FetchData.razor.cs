@@ -19,9 +19,9 @@ namespace CryptoTicker.Pages
         
 
         // prices = await Http.GetFromJsonAsync<Coin[]>("https://cryptodatadotnet.azurewebsites.net/api/GetPricesJson");
-        prices = await Http.GetFromJsonAsync<Coin[]>("https://madebygps-curly-spork-v7gqv96gg5f667w-7170.preview.app.github.dev/api/GetPricesJson");
+        prices = await Http.GetFromJsonAsync<Coin[]>("http://localhost:7170/api/GetPricesJson");
             
-        hubConnection = new HubConnectionBuilder().WithUrl("https://madebygps-curly-spork-v7gqv96gg5f667w-7071.preview.app.github.dev/api").Build();
+        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:7170/api").Build();
 
         hubConnection.On<Coin[]>("updated", (coin) =>
             {
