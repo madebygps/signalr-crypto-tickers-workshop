@@ -1,0 +1,71 @@
+{
+  "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\CryptoTicker.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "5.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 900
+  },
+  "RootNamespace": "CryptoTicker",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Pages\\Ticker.razor",
+      "TargetPath": "Pages\\Ticker.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Shared\\MudBlazorLogo.razor",
+      "TargetPath": "Shared\\MudBlazorLogo.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Pages\\AnimateState.razor",
+      "TargetPath": "Pages\\AnimateState.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\gwyne\\Developer\\crypto-ticker-dotnet\\completed\\CryptoTicker\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

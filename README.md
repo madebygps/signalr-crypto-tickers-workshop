@@ -78,6 +78,8 @@ I've created custom [VSCode Launch.json](https://code.visualstudio.com/docs/edit
 
 - I've included a `devcontainer.json` for codespaces and devcontainer support, however it's not fully working quite yet. WIP.
 - CI/CD is coming. At the moment the client is deployed on Azure Storage Account. 
+- Code has been updated to .NET 6 but is probably not fully taking advantage of the latest and greatest.
+- Tests are WIP.
 
 ## Additional resources
 
