@@ -1,6 +1,6 @@
 # Serverless Crypto Tickers
 
-A static website with a serverless backend that provides crypto price information. The tickers update every in realtime whenever new data is made available to the database.
+A Blazor static website with a .NET 6 serverless backend that provides crypto price information. The tickers update every in realtime whenever new data is made available to the database.
 
 This project contains two different architectures and was made to demo how to implement real-time functionality to a static site.
 
@@ -21,9 +21,26 @@ The starter project consists of a [Blazor WASM](https://dotnet.microsoft.com/app
 
 Subsequent new data is pushed in realtime to the static website without reloading, whenever new data is available in the [Cosmos DB](https://azure.microsoft.com/products/cosmos-db/) collection via Azure Functions and [SignalR Service](https://learn.microsoft.com/azure/azure-signalr/signalr-overview).
 
+## Run locally 
+
+You can clone the code and the completed project will work once you populate the API's [`local.settings.json`](https://azure.microsoft.com/en-us/products/cosmos-db/) with your resources.
+
+### Install
+
+- [.NET 6](https://dotnet.microsoft.com/download)
+- All the pre requisites from [this documentation](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs-code?tabs=csharp)
+
+### Debug
+
+I've created custom [VSCode Launch.json](https://code.visualstudio.com/docs/editor/debugging) tasks. Make sure the API is running before you run the Client.
+
+- Use `Attach to .NET Functions` to debug the API.
+- Use `(Starter) Launch and Debug Standalone Blazor WebAssembly App` to debug the starter Client project.
+- Use `(Completed) Launch and Debug Standalone Blazor WebAssembly App` to debug the Completed Client project.
+
 ## Steps to go from starter to completed.
 
-You can clone the code and the completed project will work once you populate the API's [`local.settings.json`](https://azure.microsoft.com/en-us/products/cosmos-db/) with your resources. However if you want to take the starter project and implement real-time functionality on your own to learn and get hands-on, here are some guidelines:
+If you want to take the starter project and implement real-time functionality on your own to learn and get hands-on, here are some guidelines:
 
 ### API
 
@@ -58,21 +75,6 @@ Some docs I found helpful:
 
 I'm using [MudBlazor](https://mudblazor.com/) for Client UI components, it's awesome. 
 
-
-## How to run locally
-
-### Install
-
-- [.NET 6](https://dotnet.microsoft.com/download)
-- All the pre requisites from [this documentation](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp)
-
-### Debug
-
-I've created custom [VSCode Launch.json](https://code.visualstudio.com/docs/editor/debugging) tasks. Make sure the API is running before you run the Client.
-
-- Use `Attach to .NET Functions` to debug the API.
-- Use `(Starter) Launch and Debug Standalone Blazor WebAssembly App` to debug the starter Client project.
-- Use `(Completed) Launch and Debug Standalone Blazor WebAssembly App` to debug the Completed Client project.
 
 ## Known issues
 
