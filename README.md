@@ -86,3 +86,6 @@ I'm using [MudBlazor](https://mudblazor.com/) for Client UI components, it's awe
 ## Additional resources
 
 This demo is a spin on this learning module, check it out for more hands-on fun! https://aka.ms/UpdateWebApp6
+
+## License
+Licensed under MIT License.
